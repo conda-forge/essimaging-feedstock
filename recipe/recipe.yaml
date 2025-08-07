@@ -1,7 +1,7 @@
 context:
   name: essimaging
   version: "25.8.0"
-  python_min: "3.10"
+  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
@@ -19,21 +19,20 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - setuptools >=68
+    - setuptools >=77
     - setuptools-scm >=8.0
     - pip
   run:
     - python >=${{ python_min }}
-    - python >=3.10
-    - dask-core
+    - dask-core >=2022.1.0
     - python-graphviz
-    - plopp
+    - plopp >=23.10.0
     - sciline >=23.9.1
     - scipp >=23.8.0
     - scippneutron >=24.12.0
     - scippnexus >=23.11.1
-    - essreduce >=25.02.4
-    - tifffile
+    - essreduce >=25.07.0
+    - tifffile >=2024.7.2
 
 tests:
   - python:
