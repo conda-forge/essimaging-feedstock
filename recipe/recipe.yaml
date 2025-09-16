@@ -1,6 +1,6 @@
 context:
   name: essimaging
-  version: "25.8.0"
+  version: "25.9.0"
   python_min: "3.11"
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/essimaging-${{ version }}.tar.gz
-  sha256: 949cb816ecce2d79082cd4901860cacfebbcaa835a2ec8f3d3991a3430f6749f
+  sha256: 3d14bca7ddf99cd781697ce6e40346ff530ade365f69e313678df3c25f4e16b3
 
 build:
   number: 0
@@ -28,11 +28,12 @@ requirements:
     - python-graphviz
     - plopp >=23.10.0
     - sciline >=23.9.1
-    - scipp >=23.8.0
+    - scipp >=25.4.0
     - scippneutron >=24.12.0
     - scippnexus >=23.11.1
-    - essreduce >=25.07.0
     - tifffile >=2024.7.2
+    - essreduce >=25.07.0
+    - scitiff >=25.7
 
 tests:
   - python:
