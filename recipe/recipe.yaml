@@ -1,6 +1,6 @@
 context:
   name: essimaging
-  version: "25.10.0"
+  version: "25.11.0"
   python_min: "3.11"
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/essimaging-${{ version }}.tar.gz
-  sha256: 9fd29951b84b30bc9f5cb08bd4ad89e52e3fa0d0cf911b83fe1ccfaae6a0ef70
+  sha256: 16f747ce88db08c2a767ff3bfdaad9949a255a20eed7f62fa40434c80506db6f
 
 build:
   number: 0
