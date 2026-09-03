@@ -3,13 +3,13 @@ About essimaging-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/essimaging-feedstock/blob/main/LICENSE.txt)
 
-Home: https://scipp.github.io/essimaging/
+Home: https://scipp.github.io/ess/imaging/
 
 Package license: BSD-3-Clause
 
 Summary: Imaging data reduction for the European Spallation Source
 
-Development: https://github.com/scipp/essimaging
+Development: https://github.com/scipp/ess/tree/main/packages/essimaging
 
 Current build status
 ====================
@@ -42,31 +42,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `essimaging` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install essimaging
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install essimaging
 ```
 
-It is possible to list all of the versions of `essimaging` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add essimaging
+# for installing globally
+pixi global install essimaging
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `essimaging` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search essimaging --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search essimaging --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search essimaging --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -78,6 +120,8 @@ mamba repoquery whoneeds essimaging --channel conda-forge
 # List dependencies of `essimaging`:
 mamba repoquery depends essimaging --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge

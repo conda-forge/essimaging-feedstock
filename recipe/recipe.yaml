@@ -1,7 +1,7 @@
 context:
   name: essimaging
-  version: "26.6.0"
-  python_min: "3.11"
+  version: "26.9.0"
+  python_min: "3.12"
 
 package:
   name: ${{ name|lower }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/essimaging-${{ version }}.tar.gz
-  sha256: ec030ac78876ecb043b0ffbd269ddfd36326eef2cfd244e1fa9e0338fc14f2b6
+  sha256: c8bbc75e098f23aff1a188ad11b12214003822855f3c2172dcf4f4caa004e955
 
 build:
   number: 0
@@ -27,21 +27,17 @@ requirements:
     - dask-core >=2022.1.0
     - python-graphviz
     - plopp >=23.10.0
-    - sciline >=23.9.1
-    - scipp >=25.4.0
-    - scippneutron >=24.12.0
-    - scippnexus >=23.11.1
-    - tifffile >=2024.7.2
-    - essreduce >=26.6.0
-    - scitiff >=25.7
+    - tifffile >=2026.5.2
+    - essreduce >=26.6.2
+    - scitiff >=26.6
 
 tests:
   - python:
       imports:
         - ess.imaging
-      pip_check: true
-      python_version: ${{ python_min }}.*
-
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 about:
   summary: Imaging data reduction for the European Spallation Source
   license: BSD-3-Clause
