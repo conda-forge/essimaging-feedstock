@@ -25,7 +25,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - dask-core >=2022.1.0
-    - python-graphviz
+    - python-graphviz >=0.20
     - plopp >=23.10.0
     - tifffile >=2026.5.2
     - essreduce >=26.6.2
